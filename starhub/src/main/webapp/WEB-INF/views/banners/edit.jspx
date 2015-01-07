@@ -5,16 +5,18 @@
 	xmlns:form="http://www.springframework.org/tags/form" version="2.0">
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
+	<spring:url value="/banners/photo" var="bannerPhotoUrl"/>
 
 	<h1>Update Banner</h1>
 	<div id="contactUpdate">
-		<form:form modelAttribute="banner" id="bannerUpdateForm" method="post">
+		<form:form modelAttribute="banner" id="bannerUpdateForm" method="post"
+			enctype="multipart/form-data">
 			<c:if test="${not empty message}">
 				<div id="message" class="${message.type}">${message.message}</div>
 			</c:if>
 			<form:label path="title">
-	            Title
-	            </form:label>
+	        Title
+	        </form:label>
 			<form:input path="title" />
 			<div>
 				<form:errors path="title" cssClass="error" />
@@ -22,8 +24,8 @@
 			<p />
 
 			<form:label path="text">
-	            Text
-	            </form:label>
+	        Text
+	        </form:label>
 			<form:input path="text" />
 			<div>
 				<form:errors path="text" cssClass="error" />
@@ -31,12 +33,17 @@
 			<p />
 
 			<form:label path="link">
-                Link
-                </form:label>
+            Link
+            </form:label>
 			<form:input path="link" />
 			<div>
 				<form:errors path="link" cssClass="error" />
 			</div>
+			<p />
+
+            <img src="${bannerPhotoUrl}/${banner.id}" style="max-width:100px;"/>
+			<label for="file"> Photo </label>
+			<input name="file" type="file" />
 			<p />
 
 			<form:hidden path="version" />

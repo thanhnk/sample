@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.Version;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "banner")
@@ -43,6 +46,8 @@ public class Banner {
 	}
 
 	@Column(name = "TITLE")
+	@NotEmpty(message = "{validation.title.NotEmpty.message}")
+	@Size(max = 100, message = "{validation.title.Size.message}")
 	public String getTitle() {
 		return title;
 	}

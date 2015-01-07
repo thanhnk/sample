@@ -1,10 +1,13 @@
 <div xmlns:jsp="http://java.sun.com/JSP/Page"
+    xmlns:sec="http://www.springframework.org/security/tags"
 	xmlns:spring="http://www.springframework.org/tags" version="2.0">
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
-	
+
 	<spring:url value="/" var="home_url" />
-	
+	<spring:url var="logoutUrl" value="/j_spring_security_logout" />
+	<spring:url var="loginUrl" value="/security/login" />
+
 	<header class="global header">
 		<div class="header-container">
 			<div id="logo" class="logo noindex">
@@ -19,7 +22,14 @@
 		<div class="inner">
 			<div class="login-container login">
 				<div class="login-wrapper" style="">
-					<a href="javascript:void(0)" class="login-cta">Log In / Sign Up</a>
+					<sec:authorize access="isAnonymous()">
+						<a href="${loginUrl}" class="login-cta">Log In</a>
+					</sec:authorize>
+					<sec:authorize access="isAuthenticated()">${labelWelcome}
+                        <sec:authentication
+							property="principal.username" />/
+						<a href="${logoutUrl}">Log Out</a>
+					</sec:authorize>
 				</div>
 
 				<div class="logged-wrapper" style="display: none;">

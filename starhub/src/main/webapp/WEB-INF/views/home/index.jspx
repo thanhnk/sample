@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div xmlns:jsp="http://java.sun.com/JSP/Page"
 	xmlns:c="http://java.sun.com/jsp/jstl/core"
-	xmlns:joda="http://www.joda.org/joda/time/tags"
+	xmlns:sec="http://www.springframework.org/security/tags"
 	xmlns:spring="http://www.springframework.org/tags" version="2.0">
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
@@ -9,29 +9,40 @@
 	<spring:message code="home_title" var="homeTitle" />
 	<spring:url value="/resources/images/1536x300.png" var="defaultBanner" />
 	<spring:url value="/resources/images/175x130.png" var="defaultTab" />
+	<spring:url value="/banners" var="bannersUrl" />
+	<spring:url value="/banners/photo" var="bannerPhotoUrl" />
 
 	<h1>${homeTitle}</h1>
 	<c:if test="${not empty banners}">
 		<table>
 			<c:forEach items="${banners}" var="banner">
 				<tr>
-					<td>${banner.title}</td>
+					<td>
+						<sec:authorize access="hasRole('ROLE_ADMIN')">
+							<a href="${bannersUrl}/${banner.id}">${banner.title}</a>
+						</sec:authorize>
+						<sec:authorize access="isAnonymous()">
+					       ${banner.title}
+						</sec:authorize>
+					</td>
 					<td>${banner.text}</td>
 					<td>${banner.link}</td>
+					<td><img src="${bannerPhotoUrl}/${banner.id}"
+						style="max-width: 1536px;" /></td>
 				</tr>
 			</c:forEach>
 		</table>
 	</c:if>
 	<c:if test="${not empty tabs}">
-        <table>
-            <c:forEach items="${tabs}" var="tab">
-                <tr>
-                    <td>${tab.title}</td>
-                    <td>${tab.text}</td>
-                    <td>${tab.level}</td>
-                    <td>${tab.parentId}</td>
-                </tr>
-            </c:forEach>
-        </table>
-    </c:if>
+		<table>
+			<c:forEach items="${tabs}" var="tab">
+				<tr>
+					<td>${tab.title}</td>
+					<td>${tab.text}</td>
+					<td>${tab.level}</td>
+					<td>${tab.parentId}</td>
+				</tr>
+			</c:forEach>
+		</table>
+	</c:if>
 </div>
