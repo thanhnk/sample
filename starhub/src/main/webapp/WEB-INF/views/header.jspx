@@ -23,7 +23,7 @@
 			<div class="login-container login">
 				<div class="login-wrapper" style="">
 					<sec:authorize access="isAnonymous()">
-						<a href="${loginUrl}" class="login-cta">Log In</a>
+						<a href="${loginUrl}" class="">Log In</a>
 					</sec:authorize>
 					<sec:authorize access="isAuthenticated()">${labelWelcome}
                         <sec:authentication

@@ -12,19 +12,58 @@
 	<spring:url value="/banners" var="bannersUrl" />
 	<spring:url value="/banners/photo" var="bannerPhotoUrl" />
 
-	<h1>${homeTitle}</h1>
-	<c:if test="${not empty banners}">
+	<div class="full-main">
+		<div class="head-grid">
+			<div class="parsys headpar">
+				<div class="rotatingbannerwide section">
+					<div class="carousel fade fluid theme-dark" data-theme="light"
+						data-indicator="true" data-control="true" data-interval="4000">
+
+						<c:if test="${not empty banners}">
+							<div class="my-gallery swipeshow">
+								<ul class="slides">
+									<c:forEach items="${banners}" var="banner">
+										<li class="slide">
+											<div class="banner-bg">
+												<sec:authorize access="hasRole('ROLE_ADMIN')">
+													<a href="${bannersUrl}/${banner.id}" class="edit">Edit</a>
+												</sec:authorize>
+												<SPAN>${banner.title}</SPAN>
+												<p>${banner.text}</p>
+												<a href="${banner.link}"> <img
+													src="${bannerPhotoUrl}/${banner.id}" width="1000"
+													height="300" />
+												</a>
+											</div>
+										</li>
+									</c:forEach>
+								</ul>
+							</div>
+
+							<script>
+								$(function() {
+									$(".my-gallery").swipeshow({
+										interval: 3000,
+										speed: 1000
+									});
+								});
+							</script>
+						</c:if>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<c:if test="${empty banners}">
 		<table>
 			<c:forEach items="${banners}" var="banner">
 				<tr>
-					<td>
-						<sec:authorize access="hasRole('ROLE_ADMIN')">
+					<td><sec:authorize access="hasRole('ROLE_ADMIN')">
 							<a href="${bannersUrl}/${banner.id}">${banner.title}</a>
-						</sec:authorize>
-						<sec:authorize access="isAnonymous()">
+						</sec:authorize> <sec:authorize access="isAnonymous()">
 					       ${banner.title}
-						</sec:authorize>
-					</td>
+						</sec:authorize></td>
 					<td>${banner.text}</td>
 					<td>${banner.link}</td>
 					<td><img src="${bannerPhotoUrl}/${banner.id}"
@@ -33,7 +72,7 @@
 			</c:forEach>
 		</table>
 	</c:if>
-	<c:if test="${not empty tabs}">
+	<c:if test="${empty tabs}">
 		<table>
 			<c:forEach items="${tabs}" var="tab">
 				<tr>

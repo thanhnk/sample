@@ -14,14 +14,17 @@
 <spring:theme code="styleSheet2" var="app_css2" />
 <spring:theme code="styleSheet3" var="app_css3" />
 <spring:theme code="styleSheet4" var="app_css4" />
+<spring:theme code="swipeshow" var="swipeshow" />
 <spring:url value="/${app_css}" var="app_css_url" />
 <spring:url value="/${app_css2}" var="app_css_url2" />
 <spring:url value="/${app_css3}" var="app_css_url3" />
 <spring:url value="/${app_css4}" var="app_css_url4" />
+<spring:url value="/${swipeshow}" var="swipeshow" />
 <link rel="stylesheet" type="text/css" media="screen" href="${app_css_url}" />
 <link rel="stylesheet" type="text/css" media="screen" href="${app_css_url2}" />
 <link rel="stylesheet" type="text/css" media="screen" href="${app_css_url3}" />
 <link rel="stylesheet" type="text/css" media="screen" href="${app_css_url4}" />
+<link rel="stylesheet" type="text/css" media="screen" href="${swipeshow}" />
 
 <spring:url value="/resources/scripts/jquery.min.js" var="jquery" />
 <spring:url value="/resources/scripts/utils.min.js" var="utils" />
@@ -30,14 +33,11 @@
 <spring:url value="/resources/scripts/shared.min.js" var="shared" />
 <spring:url value="/resources/scripts/envsettings-prod.js" var="envsettings" />
 <spring:url value="/resources/scripts/js.min.js" var="js_min" />
+<spring:url value="/resources/scripts/jquery.swipeshow.min.js" var="js_swipeshow" />
 
 <script src="${jquery}" type="text/javascript"><jsp:text/></script>
-<script src="${utils}" type="text/javascript"><jsp:text/></script>
-<script src="${granite}" type="text/javascript"><jsp:text/></script>
-<script src="${clientlibs}" type="text/javascript"><jsp:text/></script>
-<script src="${shared}" type="text/javascript"><jsp:text/></script>
-<script src="${envsettings}" type="text/javascript"><jsp:text/></script>
-<script src="${js_min}" type="text/javascript"><jsp:text/></script>
+
+<script src="${js_swipeshow}" type="text/javascript"><jsp:text/></script>
 
 <title>StarHub Demo</title>
 </head>
