@@ -1,0 +1,26 @@
+.product-black{background-color:black}
+.product-silver{background-color:#f4f4f4}
+.product-green{background-color:#73c20e}
+@media only screen and (max-width:767px){.resp-dt-table thead,.resp-dt-table tbody,.resp-dt-table th,.resp-dt-table tr,.resp-dt-table td,.resp-dt-table .td,.resp-lt-table thead,.resp-lt-table tbody,.resp-lt-table th,.resp-lt-table tr,.resp-lt-table td,.resp-lt-table .td{display:block;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.resp-dt-table thead tr,.resp-lt-table thead tr{position:absolute;top:-9999px;left:-9999px}
+.resp-dt-table tr,.resp-lt-table tr{border:1px solid #ccc}
+.resp-dt-table td,.resp-dt-table .td{border:0;border-top:1px solid #eee;position:relative;padding-left:50%;white-space:normal;text-align:left}
+.resp-dt-table td:first-child,.resp-dt-table .td:first-child{border-top:0}
+.resp-dt-table td:before,.resp-dt-table .td:before{position:absolute;top:1em;left:1em;width:45%;padding-right:10px;white-space:normal;text-align:left;font-weight:bold}
+.resp-dt-table td:before,.resp-dt-table .td:before{content:attr(data-title)}
+.resp-dt-table .detail-label{border-top:0;padding-left:1em;padding-top:1em;font-size:1.33333em;font-family:"DINWeb-Medium",Arial,sans-serif}
+.resp-lt-table{border:0}
+.resp-lt-table tr{margin-bottom:10px;border:0}
+.resp-lt-table td,.resp-lt-table .td{width:100%;border:0;padding:.5em 0}
+.resp-lt-table .detail-label{text-align:left;background:inherit;font-weight:bold;padding-bottom:.5em}
+}
+section>h1{clear:both;padding-bottom:9px;border-bottom:1px solid #eee}
+section>h2{clear:both}
+.html-element-demo{border:1px solid #CCC;padding:1em}
+.palette{padding:0 0 10px 0}
+.palette .sample{float:left;width:20px;height:20px;margin:0 10px 0 0}
+.bs-docs-grid .row-fluid{margin-bottom:20px}
+.bs-docs-grid .row-fluid [class*="span"]{background-color:#eee;text-align:center;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;min-height:40px;line-height:40px}
+.clearfix{*zoom:1}
+.clearfix:before,.clearfix:after{display:table;content:"";line-height:0}
+.clearfix:after{clear:both}

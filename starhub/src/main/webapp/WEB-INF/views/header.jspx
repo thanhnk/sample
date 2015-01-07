@@ -1,0 +1,98 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:spring="http://www.springframework.org/tags" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	
+	<spring:url value="/" var="home_url" />
+	
+	<header class="global header">
+		<div class="header-container">
+			<div id="logo" class="logo noindex">
+				<a href="${home_url}"> <img
+					src="http://www.starhub.com/etc/designs/starhub/clientlibs/img/logo-starhub.png"
+					alt="StarHub" />
+				</a>
+			</div>
+		</div>
+	</header>
+	<div class="main-menu noindex">
+		<div class="inner">
+			<div class="login-container login">
+				<div class="login-wrapper" style="">
+					<a href="javascript:void(0)" class="login-cta">Log In / Sign Up</a>
+				</div>
+
+				<div class="logged-wrapper" style="display: none;">
+					<div class="logged-username">
+						<a class="user-menu-cta" href="javascript:void(0)"> <span
+							class="icon"></span> <span class="greetings"></span>
+						</a>
+						<div class="user-menu-panel" style="width: 0px;">
+							<ul>
+								<li><a href="https://login.starhubgee.com.sg/sso/Manage">Manage
+										Hub iD</a></li>
+								<li><a href="https://secure.starhub.com/myaccountmgr/jfn">My
+										Account</a></li>
+								<li><a href="https://secure.starhub.com/myaccountmgr/jfn">Pay
+										Bills</a></li>
+								<li><a href="https://rewards.starhub.com/StarHub/index.jsp">Redeem
+										Rewards</a></li>
+							</ul>
+							<a href="http://www.starhub.com/dev/login/logout.html?r=1"
+								class="btn-grayLighter-rarrow"> <span class="icon"></span>
+								Log out
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="parsys iparsys toppar">
+				<div class="section">
+					<div class="new"></div>
+				</div>
+				<div class="iparys_inherited">
+					<div class="parsys iparsys toppar">
+						<div class="topnavigation section">
+							<div class="noindex">
+								<nav class="main-nav">
+									<ul>
+										<li class="selected"><a
+											href="http://www.starhub.com/personal.html">Personal</a>
+											<ul class="horizontal-menu">
+												<li><a
+													href="http://www.starhub.com/personal/store.html">Store</a></li>
+												<li><a
+													href="http://www.starhub.com/personal/mobile.html"
+													class="selected">Mobile</a></li>
+												<li><a
+													href="http://www.starhub.com/personal/broadband.html">Broadband</a></li>
+												<li><a href="http://www.starhub.com/personal/tv.html">TV</a></li>
+												<li><a
+													href="http://www.starhub.com/personal/voice.html">Voice</a></li>
+												<li><a
+													href="http://www.starhub.com/personal/hubbing.html">Hubbing</a></li>
+												<li><a
+													href="http://www.starhub.com/personal/promotions.html">Promotions</a></li>
+												<li><a
+													href="http://www.starhub.com/personal/rewards.html">Rewards</a></li>
+												<li><a
+													href="http://www.starhub.com/personal/support.html">Support</a></li>
+											</ul></li>
+										<li><a href="http://www.starhub.com/business.html">Business</a>
+											<ul class="horizontal-menu"></ul></li>
+										<li><a href="http://www.starhub.com/about-us.html">About
+												Us</a>
+											<ul class="horizontal-menu"></ul></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

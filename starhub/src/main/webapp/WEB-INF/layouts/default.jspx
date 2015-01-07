@@ -1,0 +1,53 @@
+<html xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags">
+<jsp:output doctype-root-element="HTML"
+	doctype-system="about:legacy-compat" />
+<jsp:directive.page contentType="text/html;charset=UTF-8" />
+<jsp:directive.page pageEncoding="UTF-8" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<spring:theme code="styleSheet" var="app_css" />
+<spring:theme code="styleSheet2" var="app_css2" />
+<spring:theme code="styleSheet3" var="app_css3" />
+<spring:theme code="styleSheet4" var="app_css4" />
+<spring:url value="/${app_css}" var="app_css_url" />
+<spring:url value="/${app_css2}" var="app_css_url2" />
+<spring:url value="/${app_css3}" var="app_css_url3" />
+<spring:url value="/${app_css4}" var="app_css_url4" />
+<link rel="stylesheet" type="text/css" media="screen" href="${app_css_url}" />
+<link rel="stylesheet" type="text/css" media="screen" href="${app_css_url2}" />
+<link rel="stylesheet" type="text/css" media="screen" href="${app_css_url3}" />
+<link rel="stylesheet" type="text/css" media="screen" href="${app_css_url4}" />
+
+<spring:url value="/resources/scripts/jquery.min.js" var="jquery" />
+<spring:url value="/resources/scripts/utils.min.js" var="utils" />
+<spring:url value="/resources/scripts/granite.min.js" var="granite" />
+<spring:url value="/resources/scripts/clientlibs.min.js" var="clientlibs" />
+<spring:url value="/resources/scripts/shared.min.js" var="shared" />
+<spring:url value="/resources/scripts/envsettings-prod.js" var="envsettings" />
+<spring:url value="/resources/scripts/js.min.js" var="js_min" />
+
+<script src="${jquery}" type="text/javascript"><jsp:text/></script>
+<script src="${utils}" type="text/javascript"><jsp:text/></script>
+<script src="${granite}" type="text/javascript"><jsp:text/></script>
+<script src="${clientlibs}" type="text/javascript"><jsp:text/></script>
+<script src="${shared}" type="text/javascript"><jsp:text/></script>
+<script src="${envsettings}" type="text/javascript"><jsp:text/></script>
+<script src="${js_min}" type="text/javascript"><jsp:text/></script>
+
+<title>StarHub Demo</title>
+</head>
+<body class="site-index-opened">
+<div class="wrapper">
+	<tiles:insertAttribute name="header" ignore="true" />
+	
+	<tiles:insertAttribute name="body" />
+			
+	<tiles:insertAttribute name="footer" ignore="true" />
+</div>
+</body>
+</html>

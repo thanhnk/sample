@@ -1,0 +1,204 @@
+<div id="footer" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:spring="http://www.springframework.org/tags" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+
+	<footer class="global footer">
+		<div class="parsys iparsys footerpar">
+			<div class="footer section">
+				<div class="footer-inner clearfix">
+					<div class="site-index">
+						<a href="javascript:void(0)"
+							class="collapsible-handler cta-site-index opened"
+							title="Site Index"><span class="icon"></span>Site Index</a>
+					</div>
+				</div>
+
+				<div class="site-index-content collapsible-content">
+					<div class="collapsible-content-inner clearfix">
+						<div class="cell1 odd">
+							<!-- The changes is here -->
+							<h4>
+								<a
+									href="https://login.starhubgee.com.sg/VCRLS/login.cgi?cb=https%3A%2F%2Flogin.starhubgee.com.sg%2Fsso%2Fmain.jsp">My
+									Account</a>
+							</h4>
+							<ul class="collapsible-section">
+								<li><a href="https://login.starhubgee.com.sg/sso/main.jsp">View/Pay
+										My Bills</a></li>
+								<li><a href="http://www.starhub.com/redeem.html">Redeem
+										My Points</a></li>
+								<li><a href="https://login.starhubgee.com.sg/sso/main.jsp">Recontract
+										My Services</a></li>
+								<li><a
+									href="http://www.starhub.com/personal/mobile/prepaid-plans/top-up-methods/top-up-cards/happy-prepaid-top-up-cards.html">Top-up
+										My Prepaid Card</a></li>
+							</ul>
+						</div>
+
+						<div class="cell1 even">
+
+							<!-- The changes is here -->
+							<h4>
+								<a href="http://www.starhub.com/personal/store.html">Mobile
+									Store</a>
+							</h4>
+							<ul class="collapsible-section">
+								<li><a
+									href="https://www.starhub.com/personal/store/mobile/browse.html">Mobile
+										Phones</a></li>
+								<li><a
+									href="http://www.starhub.com/personal/promotions/store.html">Online
+										Exclusives</a></li>
+								<li><a
+									href="http://www.starhub.com/personal/store/mobile/bill-rebate.html">Bill
+										Rebates</a></li>
+							</ul>
+
+							<!-- The changes is here -->
+							<h4>
+								<a href="http://www.starhub.com/personal/promotions/mobile.html">Mobile
+									Promotions</a>
+							</h4>
+							<ul class="collapsible-section">
+							</ul>
+						</div>
+
+						<div class="cell1 odd">
+
+							<!-- The changes is here -->
+							<h4>
+								<a
+									href="http://www.starhub.com/personal/mobile/postpaid-plans.html">Mobile
+									Postpaid</a>
+							</h4>
+							<ul class="collapsible-section">
+								<li><a
+									href="http://www.starhub.com/personal/mobile/postpaid-plans/smartsurf-hd-plans.html">Voice
+										&amp; Data Plans</a></li>
+								<li><a
+									href="http://www.starhub.com/personal/mobile/postpaid-plans/powervalue-plans.html">Voice
+										Only Plans</a></li>
+								<li><a
+									href="http://www.starhub.com/personal/broadband/mobile-broadband/price-plans.html">Data
+										Only Plans</a></li>
+							</ul>
+
+							<!-- The changes is here -->
+							<h4>
+								<a
+									href="http://www.starhub.com/personal/mobile/prepaid-plans.html">Mobile
+									Prepaid</a>
+							</h4>
+							<ul class="collapsible-section">
+								<li><a
+									href="http://www.starhub.com/personal/mobile/prepaid-plans/prepaid-sim-cards/happy-prepaid-sim.html">Prepaid
+										Voice</a></li>
+								<li><a
+									href="http://www.starhub.com/personal/mobile/prepaid-plans/top-up-methods/top-up-cards/happy-prepaid-top-up-cards.html">Prepaid
+										Top-Up</a></li>
+							</ul>
+
+							<!-- The changes is here -->
+							<h4>
+								<a href="http://roaming.starhub.com/">Roaming</a>
+							</h4>
+							<ul class="collapsible-section">
+								<li><a href="http://roaming.starhub.com/">International
+										Roaming</a></li>
+								<li><a
+									href="http://www.starhub.com/personal/mobile/prepaid-plans/visiting-singapore.html">Roaming
+										In Singapore</a></li>
+							</ul>
+						</div>
+
+						<div class="cell1 even">
+
+							<!-- The changes is here -->
+							<h4>
+								<a href="http://www.starhub.com/personal/hubbing.html">Hubbing</a>
+							</h4>
+							<ul class="collapsible-section">
+								<li><a
+									href="http://www.starhub.com/personal/hubbing.html#homehub-100-cable">HomeHub
+										100 (Cable)</a></li>
+								<li><a
+									href="http://www.starhub.com/personal/hubbing.html#homehub-200-fibre">HomeHub
+										200 (Fibre)</a></li>
+								<li><a
+									href="http://www.starhub.com/personal/hubbing.html#homehub-500-fibre">HomeHub
+										500 (Fibre)</a></li>
+							</ul>
+						</div>
+
+						<div class="cell1 odd">
+
+							<!-- The changes is here -->
+							<h4>
+								<a href="http://www.starhub.com/personal/support/mobile.html">Mobile
+									Support</a>
+							</h4>
+							<ul class="collapsible-section">
+								<li><a
+									href="http://www.starhub.com/personal/support/contact-us.html">Contact
+										Us</a></li>
+								<li><a
+									href="http://www.starhub.com/personal/support/locate-us.html">Locate
+										Us</a></li>
+								<li><a href="http://community.starhub.com/">StarHub
+										Community</a></li>
+							</ul>
+
+							<!-- The changes is here -->
+							<h4>
+								<a
+									href="http://www.starhub.com/about-us/legal-notices-and-terms/terms-and-conditions/consumer.html">Legal
+									Notices &amp; Terms</a>
+							</h4>
+							<ul class="collapsible-section">
+							</ul>
+
+							<h4>
+								<a href="http://www.starhub.com/about-us/follow-starhub.html">Follow
+									Us</a>
+							</h4>
+							<ul class="collapsible-section">
+								<li><a href="http://www.facebook.com/starhub"
+									target="_blank"><img class="footer-icon"
+										src="http://www.starhub.com/content/dam/Icons/socialshare/icon-fb.png" />Facebook</a></li>
+								<li><a href="https://twitter.com/starhub" target="_blank"><img
+										class="footer-icon"
+										src="http://www.starhub.com/content/dam/Icons/socialshare/icon-twitter.png" />Twitter</a></li>
+								<li><a href="https://plus.google.com/+StarHub/posts"
+									target="_blank"><img class="footer-icon"
+										src="http://www.starhub.com/content/dam/Icons/socialshare/icon-gplus.png" />Google+</a></li>
+								<li><a
+									href="http://www.starhub.com/about-us/follow-starhub.html"><img
+										class="footer-icon"
+										src="http://www.starhub.com/content/dam/Icons/socialshare/icon-rss.png" />RSS
+										Feed</a></li>
+								<li><a
+									href="http://www.starhub.com/about-us/follow-starhub.html"><img
+										class="footer-icon"
+										src="http://www.starhub.com/content/dam/Icons/socialshare/more-social.png" />More</a></li>
+							</ul>
+						</div>
+
+						<div class="cell4">
+							<span class="copyright">© <span class="copyright-starhub">StarHub
+									2015</span>. All rights reserved.
+								<div class="footer-legal">
+									<a
+										href="http://www.starhub.com/about-us/legal-notices-and-terms/personal-data-protection.html">Personal
+										Data Protection</a>
+								</div></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="iparys_inherited">
+				<div class="parsys iparsys footerpar"></div>
+			</div>
+		</div>
+	</footer>
+</div>
