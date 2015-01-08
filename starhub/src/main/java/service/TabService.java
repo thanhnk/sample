@@ -10,4 +10,6 @@ public interface TabService {
 	public Tab findById(Long id);
 
 	public Tab save(Tab contact);
+
+	public List<Tab> findByParentId(Long parentId);
 }

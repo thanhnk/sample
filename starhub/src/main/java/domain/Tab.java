@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Version;
 import javax.validation.constraints.Size;
@@ -16,13 +18,13 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "tab")
+@NamedQueries({ @NamedQuery(name = "Tab.findByParentId", query = "select t from Tab t where t.parentId = :parentId") })
 public class Tab {
 	private Long id;
 	private int version;
 	private String title;
 	private String text;
 	private Long parentId;
-	private Long level;
 	private byte[] photo;
 
 	@Id
@@ -84,14 +86,5 @@ public class Tab {
 
 	public void setParentId(Long parentId) {
 		this.parentId = parentId;
-	}
-
-	@Column(name = "LEVEL")
-	public Long getLevel() {
-		return level;
-	}
-
-	public void setLevel(Long level) {
-		this.level = level;
 	}
 }

@@ -1,0 +1,2 @@
+set MAVEN_OPTS=-Xms256m -Xmx1024m -XX:MaxPermSize=128m -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 -XX:+DisableExplicitGC -Xverify:none
+mvn compile war:exploded tomcat7:run-war-only -Ptomcat,rapid -Dmagnolia.logs=./logs

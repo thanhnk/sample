@@ -32,8 +32,13 @@ public class HomeController {
 		uiModel.addAttribute("banners", banners);
 
 		logger.info("Listing tabs");
-		List<Tab> tabs = tabService.findAll();
-		uiModel.addAttribute("tabs", tabs);
+
+		List<Tab> tabs0 = tabService.findByParentId(0L);
+		List<Tab> tabs1 = tabService.findByParentId(1L);
+		List<Tab> tabs2 = tabService.findByParentId(2L);
+		uiModel.addAttribute("tabs0", tabs0);
+		uiModel.addAttribute("tabs1", tabs1);
+		uiModel.addAttribute("tabs2", tabs2);
 
 		return "home/index";
 	}

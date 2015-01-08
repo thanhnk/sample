@@ -10,6 +10,7 @@
 
 	<properties>
 		<spring.framework.version>3.1.1.RELEASE</spring.framework.version>
+		<tomcat.version>7.0.42</tomcat.version>
 	</properties>
 
 	<dependencies>
@@ -36,8 +37,11 @@
 			<version>1.0.1.RELEASE</version>
 		</dependency>
 
-		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-jdbc</artifactId> 
-			<version>${spring.framework.version}</version> </dependency> -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.framework.version}</version>
+		</dependency>
 
 		<!-- Hibernate dependencies -->
 		<dependency>
@@ -45,6 +49,14 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>3.6.0.Final</version>
 		</dependency>
+
+		<!-- Use for CriteriaQuery -->
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<version>1.0.0.Final</version>
+		</dependency>
+
 
 		<!-- Validation dependencies -->
 		<dependency>
@@ -137,6 +149,12 @@
 			<version>1.2</version>
 		</dependency>
 
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.34</version>
+		</dependency>
+
 		<!-- More -->
 
 		<dependency>
@@ -153,7 +171,46 @@
 		</dependency>
 	</dependencies>
 
+	<profiles>
+		<profile>
+			<id>tomcat</id>
+			<properties>
+				<tomcat.http.port>8001</tomcat.http.port>
+			</properties>
+			<build>
+				<finalName>starhub-test</finalName>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.tomcat.maven</groupId>
+						<artifactId>tomcat7-maven-plugin</artifactId>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
 	<build>
+		<finalName>starhub</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.0</version>
+					<configuration>
+						<path>/${project.build.finalName}</path>
+						<port>${tomcat.http.port}</port>
+						<warDirectory>${project.build.directory}/${project.build.finalName}
+						</warDirectory>
+						<url>http://localhost:${tomcat.http.port}/manager</url>
+						<!-- Until https://issues.apache.org/jira/browse/MTOMCAT-119 is fixed 
+							and released (in version 2.1), an empty context.xml is required -->
+						<contextFile>${basedir}/src/tomcat/context.xml</contextFile>
+						<uriEncoding>UTF-8</uriEncoding>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -165,6 +222,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>starhub</finalName>
 	</build>
+
 </project>

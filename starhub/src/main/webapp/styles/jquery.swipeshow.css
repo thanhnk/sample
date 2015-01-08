@@ -91,9 +91,27 @@ html.swipeshow-grabbed, html.swipeshow-grabbed * {
 	right:5px;
 }
 
+.swipeshow .slide a.button {
+    position: absolute;
+    bottom:20px;
+    left:10px;
+}
+
 /* Defaults: OVERRIDE THIS! */
 .swipeshow {
 	width: 1000px;
 	height: 300px;
 	margin: auto;
+}
+
+a.edit_tab{
+	background: url('clientlibs/img/edit_icon.png') no-repeat;
+	width: 16px !important;
+	height: 16px !important;
+	min-width:16px !important;
+	min-height: 16px !important;
+	margin:0 !important;
+	padding:0 !important;
+	position: absolute;
+	cursor: pointer !important;
 }
