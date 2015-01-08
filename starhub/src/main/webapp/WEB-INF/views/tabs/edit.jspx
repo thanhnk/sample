@@ -24,16 +24,17 @@
 			</div>
 			<p />
 
-			<form:label path="text">
+			<c:if test="${not empty parents }">
+				<form:label path="text">
 	        Text
 	        </form:label>
-			<form:input path="text" />
-			<div>
-				<form:errors path="text" cssClass="error" />
-			</div>
-			<p />
+				<form:input path="text" />
+				<div>
+					<form:errors path="text" cssClass="error" />
+				</div>
+				<p />
 
-			<c:if test="${not empty parents }">
+
 				<form:label path="parentId">
             Parent
             </form:label>
