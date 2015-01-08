@@ -11,6 +11,8 @@
 	<spring:url value="/resources/images/175x130.png" var="defaultTab" />
 	<spring:url value="/resources/images/green-btn-learn-more.jpg"
 		var="green_btn_learn_more" />
+	<spring:url value="/resources/images/keytask-placeholder.gif"
+		var="keytask_placeholder" />
 	<spring:url value="/banners" var="bannersUrl" />
 	<spring:url value="/banners/photo" var="bannerPhotoUrl" />
 	<spring:url value="/tabs" var="tabsUrl" />
@@ -49,8 +51,8 @@
 							<script>
 								$(function() {
 									$(".my-gallery").swipeshow({
-										interval: 3000,
-										speed: 1000
+										interval : 3000,
+										speed : 1000
 									});
 								});
 							</script>
@@ -88,9 +90,9 @@
 														title="Store" style="height: 200px;">
 														<div class="inner">
 															<div class="icon-wrap">
-														         <img src="http://www.starhub.com/etc/designs/starhub/clientlibs/img/keytask-placeholder.gif" class="key-icon-placeholder" />
-																<img src="${tabPhotoUrl}/${tab.id}" class="key-icon"
-																	alt="" />
+																<img src="${keytask_placeholder}"
+																	class="key-icon-placeholder" /> <img
+																	src="${tabPhotoUrl}/${tab.id}" class="key-icon" alt="" />
 															</div>
 															<div class="cell-content">
 																<h3>${tab.title }</h3>
@@ -104,8 +106,9 @@
 														style="height: 200px;">
 														<div class="inner">
 															<div class="icon-wrap">
-																<img src="${tabPhotoUrl}/${tab.id}" class="key-icon"
-																	alt="" />
+																<img src="${keytask_placeholder}"
+																	class="key-icon-placeholder" /> <img
+																	src="${tabPhotoUrl}/${tab.id}" class="key-icon" alt="" />
 															</div>
 															<div class="cell-content">
 																<h3>${tab.title }</h3>
@@ -133,9 +136,10 @@
 														title="Store" style="height: 200px;">
 														<div class="inner">
 															<div class="icon-wrap">
-															    <img src="http://www.starhub.com/etc/designs/starhub/clientlibs/img/keytask-placeholder.gif" class="key-icon-placeholder" />
-																<img src="${tabPhotoUrl}/${tab.id}" class="key-icon"
-																	alt="" />
+																<img
+																	src="http://www.starhub.com/etc/designs/starhub/clientlibs/img/keytask-placeholder.gif"
+																	class="key-icon-placeholder" /> <img
+																	src="${tabPhotoUrl}/${tab.id}" class="key-icon" alt="" />
 															</div>
 															<div class="cell-content">
 																<h3>${tab.title }</h3>
@@ -171,21 +175,21 @@
 
 			<!-- End Tabs -->
 			<script type="text/javascript">
-            $(document).ready(function() {
-                $("ul.customer-tab li:first-child").addClass("active");
-                $("div.tab-content div:first-child").addClass("active");
-                $("ul.customer-tab li a.tab").click(function(){
-                	//Remove active class
-                	$("ul.customer-tab li").removeClass("active");
-                	$("div.tab-content div").removeClass("active");
-                	
-                	$(this).parent().addClass("active");
-                	var tabNum = $(this).attr("tab-num");
-                	$("div.tab-content #tab-" + tabNum).addClass("active");
-                	return false;
-                });
-            });
-        </script>
+				$(document).ready(function() {
+					$("ul.customer-tab li:first-child").addClass("active");
+					$("div.tab-content div:first-child").addClass("active");
+					$("ul.customer-tab li a.tab").click(function() {
+						//Remove active class
+						$("ul.customer-tab li").removeClass("active");
+						$("div.tab-content div").removeClass("active");
+
+						$(this).parent().addClass("active");
+						var tabNum = $(this).attr("tab-num");
+						$("div.tab-content #tab-" + tabNum).addClass("active");
+						return false;
+					});
+				});
+			</script>
 		</div>
 	</c:if>
 

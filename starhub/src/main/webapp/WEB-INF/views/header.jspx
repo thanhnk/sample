@@ -5,6 +5,7 @@
 	<jsp:output omit-xml-declaration="yes" />
 
 	<spring:url value="/" var="home_url" />
+	<spring:url value="/resources/images" var="image_url" />
 	<spring:url var="logoutUrl" value="/j_spring_security_logout" />
 	<spring:url var="loginUrl" value="/security/login" />
 
@@ -12,7 +13,7 @@
 		<div class="header-container">
 			<div id="logo" class="logo noindex">
 				<a href="${home_url}"> <img
-					src="http://www.starhub.com/etc/designs/starhub/clientlibs/img/logo-starhub.png"
+					src="${image_url}/logo-starhub.png"
 					alt="StarHub" />
 				</a>
 			</div>
