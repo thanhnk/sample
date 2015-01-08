@@ -10,4 +10,5 @@ public class Tab_ {
 	public static volatile SingularAttribute<Tab, Long> id;
 	public static volatile SingularAttribute<Tab, Long> parentId;
 	public static volatile SingularAttribute<Tab, Integer> version;
+	public static volatile SingularAttribute<Tab, Byte[]> photo;
 }

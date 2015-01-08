@@ -136,8 +136,7 @@
 														title="Store" style="height: 200px;">
 														<div class="inner">
 															<div class="icon-wrap">
-																<img
-																	src="http://www.starhub.com/etc/designs/starhub/clientlibs/img/keytask-placeholder.gif"
+																<img src="${keytask_placeholder}"
 																	class="key-icon-placeholder" /> <img
 																	src="${tabPhotoUrl}/${tab.id}" class="key-icon" alt="" />
 															</div>
@@ -153,8 +152,9 @@
 														style="height: 200px;">
 														<div class="inner">
 															<div class="icon-wrap">
-																<img src="${tabPhotoUrl}/${tab.id}" class="key-icon"
-																	alt="" />
+																<img src="${keytask_placeholder}"
+																	class="key-icon-placeholder" /> <img
+																	src="${tabPhotoUrl}/${tab.id}" class="key-icon" alt="" />
 															</div>
 															<div class="cell-content">
 																<h3>${tab.title }</h3>
